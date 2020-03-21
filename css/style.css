@@ -5,9 +5,10 @@ html{
     font-size: medium;
 }
 body{
-    margin-top: 2rem;
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-top: 1rem;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    position: relative;
 }
 header{
     display: flex;
@@ -20,5 +21,38 @@ header>img{
 }
 header>h1{
     /* padding-left: 2rem; */
-    margin-left: 2rem;
+    margin: 1rem ;
 }
+#switch-language{
+    align-self: flex-start;
+    width: 6rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    border:solid darkgray;
+}
+#switch-language>label{
+
+    text-align: center;
+}
+#switch-language-slt{
+    font-size: 1rem;
+}
+#go-to-top{
+    position: absolute;
+    right: 0rem;
+}
+/* a:link{text-decoration:none;   指正常的未被访问过的链接} */
+a:visited{
+    color: blueviolet; /* 指已经访问过的链接 */
+}
+a:hover{color: darkblue;/*指鼠标在链接*/}
+/* a:active{指正在点的链接 } */
+.icon-link{
+    text-decoration:none;
+}
+/* svg{
+} */
+/* 本地化 语言可切换 */
+/* h1,h2,h3,h4,h5,h6,p,li{
+    border: 1px solid red;
+} */
