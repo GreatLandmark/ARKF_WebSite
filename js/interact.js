@@ -21,10 +21,8 @@ $("#switch-language-slt").change((va) => {
         case "default":
         case "zh":
         case "cht":
-        case "jp":
-        case "kor":
-            maxSize = 950;
-            break;
+        case "kor": maxSize = 950; break;
+        case "jp": maxSize = 600; break;
         default:
             maxSize = 1400;
     }
