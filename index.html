@@ -18,7 +18,7 @@ __Email__='greatlandmark@outlook.com' -->
 <body>
     <header id="header">
         <div id="switch-language">
-            <label for="switch-language-slt">Language</label>
+            <label for="switch-language-slt">Language<sup>*</sup></label>
             <select id="switch-language-slt">
                 <option value="default">Default</option>
                 <option value="zh">中文(简体)</option>
@@ -46,10 +46,10 @@ __Email__='greatlandmark@outlook.com' -->
             <section>
                 <h2>目录</h2>
                 <ul>
-                    <li translate="no"><a href="#introduction">介绍</a></li>
-                    <li translate="no"><a href="#download">下载</a></li>
-                    <li translate="no"><a href="#support">支持</a></li>
-                    <li translate="no"><a href="#about">关于</a></li>
+                    <li translate="no"><a class="text-decoration-none" href="#introduction">介绍</a></li>
+                    <li translate="no"><a class="text-decoration-none" href="#download">下载</a></li>
+                    <li translate="no"><a class="text-decoration-none" href="#support">支持</a></li>
+                    <li translate="no"><a class="text-decoration-none" href="#about">关于</a></li>
                 </ul>
             </section>
             <section id="introduction">
@@ -96,16 +96,29 @@ __Email__='greatlandmark@outlook.com' -->
                         <ul>
                             <li>下载链接1 :</li>
                             <a translate="no"
-                                href="https://greatlandmark.coding.net/api/share/download/8fa51b06-52b5-4502-b514-fb7145120a51">ARKF
-                                v1.71 (Coding)</a>
+                                href="https://greatlandmark.coding.net/api/share/download/8fa51b06-52b5-4502-b514-fb7145120a51">
+                                ARKF v1.71 (Coding)</a>
                             <li>下载链接2 :</li>
-                            <a translate="no"
-                                href="https://gitee.com/greatlandmark/ARKF/attach_files/352827/download">ARKF
-                                v1.71
-                                (Gitee)</a>
+                            <a translate="no" href="https://gitee.com/greatlandmark/ARKF/attach_files/352827/download">
+                                ARKF v1.71 (Gitee)</a>
                             <li>扫描下载</li>
                             <img height="180px" src="./svg/ARKF_apk1.71_coding.svg" alt="QRcode Android">
                         </ul>
+                        <li>注意(安卓用户):</li>
+                        <p>安卓手机和平板用户，如果你的设备上没有 Google Play Services for AR 应用，为了更好地体验 ARKF应用，请前往应用商店下载。</p>
+                        <div>
+                            <a translate="no" href="https://developers.google.cn/ar/discover"><img
+                                    class="img-text-float-left" height="50" src="./image/ARCore1.15.png"
+                                    alt="AR Core APK"></a>
+                            <p>Google Play Services for AR：又称为 ARCore APK，ARCore 是构建增强现实应用的 Andriod
+                                SDK，这是开发人员使用的系统组件，在桌面不可见，请在应用商城搜索使用ARCore的应用來体验，ARCore将虚拟内容，通过手机摄像头，与看到的现实世界整合，理解和跟踪它相对于现实世界的位置。
+                            </p>
+                            <p>ARCore APK 快速链接：</p>
+                            <a href="https://appstore.huawei.com/app/C100300123">华为应用商店</a> &nbsp;,&nbsp;
+                            <a href="http://apps.samsung.com/appquery/appDetail.as?appId=com.google.ar.core">三星应用商店</a>
+                            &nbsp;,&nbsp;
+                            <a href="http://www.appchina.com/app/com.google.ar.core">其他应用商店</a>
+                        </div>
                     </ul>
                     <h3>源代码下载地址：</h3>
                     <a class="icon-link" translate="no" href="https://gitee.com/greatlandmark/ARKF">
@@ -143,15 +156,21 @@ __Email__='greatlandmark@outlook.com' -->
     <aside id="right-aside">
     </aside>
     <footer id="footer">
+        <hr color=#987cb9 size=1 />
+        <div>
+            <p>* 网页语言翻译不一定准确。</p>
+            <!-- <p>如有问题，请联系网页作者</p> -->
+        </div>
         <div>
             <table>
-                <tr>
+                <!-- <tr>
                     <td>&nbsp;</td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td><svg class="icon" height="2rem" width="2rem" aria-hidden="true">
-                            <use xlink:href="#icon-icon_email1"></use>
-                        </svg></td>
+                            <use xlink:href="#icon-icon_email2"></use>
+                        </svg>
+                    </td>
                     <td>&nbsp; GreatLandmark@outlook.com</td>
                 </tr>
             </table>

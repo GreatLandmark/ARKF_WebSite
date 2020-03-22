@@ -18,15 +18,16 @@ $("#switch-language-slt").change((va) => {
     console.log("language:" + curLanguage);
     //window.location.reload();
     switch (preLanguage) {
-        case "default":
+        case "default": preLanguage="zh";
         case "zh":
-        case "cht":
         case "kor": maxSize = 950; break;
+        case "cht": maxSize=800;break;
         case "jp": maxSize = 600; break;
         default:
             maxSize = 1400;
     }
-    console.log("maxSize:" + maxSize);
+    if(curLanguage=="default"){curLanguage="zh";}
+    console.log("maxSize:" + preLanguage+maxSize+curLanguage);
     let [query, obj] = getArr(maxSize);
     GetBaidu(preLanguage, curLanguage, query, obj);
     preLanguage = curLanguage;

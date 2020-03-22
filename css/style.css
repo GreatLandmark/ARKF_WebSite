@@ -48,12 +48,12 @@ body {
 #left-aside, #right-aside {
     /* position: relative; */
     min-width: 12rem;
-    width:14vm;
+    width: 14vm;
     max-width: 99vw;
 }
 
 #right-aside {
-    /* right: 0; */
+    background-color: inherit;
 }
 
 #switch-language {
@@ -115,36 +115,34 @@ article>section>div {
     bottom: 3rem;
 }
 
-#about a {
+.text-decoration-none, #about a {
     text-decoration: none;
 }
 
 #footer {
     width: 90vw;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-#footer>div:first-child {
+#footer>div:nth-child(2) {
+    font-size: 0.8rem;
+    align-self: start;
+    margin-left: 4vw;
+}
+
+#footer>div{
     margin-right: 15vw;
+}
+
+hr {
+    width: 100%;
 }
 
 .icon-link {
     text-decoration: none;
 }
-
-/* .text-vertical-center{
-    vertical-align: middle;
-} */
-
-/* svg{
-} */
-
-/* 本地化 语言可切换 */
-
-/* h1,h2,h3,h4,h5,h6,p,li{
-    border: 1px solid red;
-} */
 
 .icon {
     height: "1rem";
@@ -152,4 +150,9 @@ article>section>div {
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
+}
+
+.img-text-float-left {
+    float: left;
+    margin-right: 1rem;
 }
