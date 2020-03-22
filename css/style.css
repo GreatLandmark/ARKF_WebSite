@@ -7,19 +7,42 @@ html {
     width: fit-content;
 }
 
-/* a:link{text-decoration:none;   指正常的未被访问过的链接} */
+/* a:link { */
 
-a:visited {
-    color: blueviolet;
-    /* 指已经访问过的链接 */
+/* 指正常的未被访问过的链接 */
+
+/* text-decoration: none; */
+
+/* color: blue; */
+
+/* } */
+
+a {
+    color: blue;
 }
 
 a:hover {
-    color: darkblue;
+    color: blueviolet;
     /*指鼠标在链接*/
 }
 
-/* a:active{指正在点的链接 } */
+a:active {
+    /* 指正在点的链接 */
+    color: rgb(247, 0, 255);
+}
+
+a:visited {
+    /* 指已经访问过的链接 */
+    color: darkblue;
+}
+
+.text-decoration-none, #contents a, #about a {
+    text-decoration: none;
+}
+
+#about a {
+    color: rgb(19, 71, 122);
+}
 
 body {
     position: relative;
@@ -64,10 +87,17 @@ body {
 
 #switch-language>label {
     text-align: center;
+    font-size: 0.9rem;
 }
 
 #switch-language-slt {
-    font-size: 1rem;
+    font-size: 0.9rem;
+}
+
+/* #switch-language-slt:focus, */
+
+#switch-language-slt:hover {
+    font-size: 1.1rem;
 }
 
 article {
@@ -115,10 +145,6 @@ article>section>div {
     bottom: 3rem;
 }
 
-.text-decoration-none, #about a {
-    text-decoration: none;
-}
-
 #footer {
     width: 90vw;
     display: flex;
@@ -132,12 +158,12 @@ article>section>div {
     margin-left: 4vw;
 }
 
-#footer>div{
+#footer>div {
     margin-right: 15vw;
 }
 
 hr {
-    width: 100%;
+    width: 100%; color:#987cb9 ;size:3 ;
 }
 
 .icon-link {

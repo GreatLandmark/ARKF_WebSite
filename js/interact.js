@@ -27,6 +27,7 @@ $("#switch-language-slt").change((va) => {
             maxSize = 1400;
     }
     if(curLanguage=="default"){curLanguage="zh";}
+    if(curLanguage==preLanguage){return;}
     console.log("maxSize:" + preLanguage+maxSize+curLanguage);
     let [query, obj] = getArr(maxSize);
     GetBaidu(preLanguage, curLanguage, query, obj);
