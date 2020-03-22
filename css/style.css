@@ -1,66 +1,155 @@
-/* *{
+/* *, body, table, #left-aside, #right-aside, #main, #header, #footer, article {
     border: 1px solid black;
 } */
-html{
+
+html {
     font-size: medium;
+    width: fit-content;
 }
-body{
-    margin-top: 1rem;
+
+/* a:link{text-decoration:none;   指正常的未被访问过的链接} */
+
+a:visited {
+    color: blueviolet;
+    /* 指已经访问过的链接 */
+}
+
+a:hover {
+    color: darkblue;
+    /*指鼠标在链接*/
+}
+
+/* a:active{指正在点的链接 } */
+
+body {
     position: relative;
+    background-color: rgb(248, 237, 220);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-#header{
-    margin: 0 1rem 0 1rem;
+
+#header {
+    margin: 1rem 1rem 0 1rem;
     /* position: relative; */
+    min-width: 96vw;
     height: 2rem;
 }
-#switch-language{
+
+#main {
+    /* align-self: flex-start; */
+    position: relative;
+    min-width: 25rem;
+    max-width: 68vw;
+    margin: 0 1rem 0 1rem;
+}
+
+#left-aside, #right-aside {
+    /* position: relative; */
+    min-width: 12rem;
+    width:14vm;
+    max-width: 99vw;
+}
+
+#right-aside {
+    /* right: 0; */
+}
+
+#switch-language {
     position: absolute;
     right: 2rem;
-    border:solid darkgray;
+    border: solid darkgray;
 }
-#switch-language>label{
+
+#switch-language>label {
     text-align: center;
 }
-#switch-language-slt{
+
+#switch-language-slt {
     font-size: 1rem;
 }
-article{
-    margin-left: 15vw;
-    margin-right: 15vw;
+
+article {
+    margin-left: 1px;
+    margin-right: 1px;
+    /* width: 50vw; */
 }
-article>header{
-    display: flex;align-items: center;
+
+article>header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    min-height: 10rem;
 }
-article>header img{
+
+article>header>div:first-child {
+    flex-basis: 18%;
+    display: flex;
+    justify-content: center;
+}
+
+article>header>div:nth-child(2) {
+    flex-basis: 60%;
+}
+
+article>header img {
+    width: 8rem;
+    max-height: 8rem;
+}
+
+article>header h1 {
+    text-align: center;
     margin-left: 1rem;
-    width: 150px;
-    height: 150px;
 }
-article>header h1{
-    /* padding-left: 2rem; */
-    margin-left: 2rem ;
-}
-article>section>div{
+
+article>section>div {
     margin-left: 2rem;
 }
-#go-to-top{
+
+#go-to-top {
     position: absolute;
     width: 3rem;
     /* height: 3rem; */
-    right: 2rem;
+    right: -3rem;
+    bottom: 3rem;
 }
-/* a:link{text-decoration:none;   指正常的未被访问过的链接} */
-a:visited{
-    color: blueviolet; /* 指已经访问过的链接 */
+
+#about a {
+    text-decoration: none;
 }
-a:hover{color: darkblue;/*指鼠标在链接*/}
-/* a:active{指正在点的链接 } */
-.icon-link{
-    text-decoration:none;
+
+#footer {
+    width: 90vw;
+    display: flex;
+    justify-content: flex-end;
 }
+
+#footer>div:first-child {
+    margin-right: 15vw;
+}
+
+.icon-link {
+    text-decoration: none;
+}
+
+/* .text-vertical-center{
+    vertical-align: middle;
+} */
+
 /* svg{
 } */
+
 /* 本地化 语言可切换 */
+
 /* h1,h2,h3,h4,h5,h6,p,li{
     border: 1px solid red;
 } */
+
+.icon {
+    height: "1rem";
+    width: "1rem";
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
