@@ -23,6 +23,7 @@ a {
 
 a:hover {
     color: blueviolet;
+    text-decoration: underline;
     /*指鼠标在链接*/
 }
 
@@ -31,13 +32,20 @@ a:active {
     color: rgb(247, 0, 255);
 }
 
-a:visited {
-    /* 指已经访问过的链接 */
-    color: darkblue;
-}
+/* a:visited { */
+
+/* 指已经访问过的链接 */
+
+/* color: darkblue; */
+
+/* } */
 
 .text-decoration-none, #contents a, #about a {
     text-decoration: none;
+}
+
+#about a:hover {
+    text-decoration: underline;
 }
 
 #about a {
@@ -163,7 +171,9 @@ article>section>div {
 }
 
 hr {
-    width: 100%; color:#987cb9 ;size:3 ;
+    width: 100%;
+    color: #987cb9;
+    size: 3;
 }
 
 .icon-link {
