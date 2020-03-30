@@ -6,27 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARKF | Demo</title>
     <style>
+        /* * {
+            border: 1px solid;
+        } */
+
         body {
             background-color: floralwhite;
         }
 
         #demo-video {
-            height: 70vh;
+            margin-top: 1rem;
+            min-height: 70vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
+        }
+
+        #demo-video>video {
+            width: 60vw;
         }
     </style>
+    <script>
+        function js_load_video(mName) {
+            var videoDiv = document.getElementById("demo-video");
+            var vids = videoDiv.getElementsByTagName("video");
+            if (vids.length > 0) {
+                for (var i = 0; i < vids.length; i++) {
+                    vids[i].remove();
+                }
+            }
+            var ul = videoDiv.getElementsByTagName("ul")[0];
+            var video = document.createElement("video");
+            if (mName == "facet_tree_video") {
+                video.src = "https://greatlandmark.gitee.io/resources/ARKF/DemoVideo/ARKF_facet_tree_demo.mp4"
+            } else if (mName == "sandbox_video") {
+                video.src = "https://greatlandmark.gitee.io/resources/ARKF/DemoVideo/ARKF_sandbox_demo.mp4";
+            } else {
+                return;
+            }
+            video.controls = "controls";
+            video.autoplay = "autoplay";
+            videoDiv.insertBefore(video, ul);
+        }
+    </script>
 </head>
 
 <body>
     <div id="demo-video">
+
         <ul>
-            <li><a href="https://greatlandmark.gitee.io/resources/ARKF/DemoVideo/ARKF_facet_tree_demo.mp4">分面树场景 Facet
-                    tree
-                    scene</a></li>
-            <li><a href="https://greatlandmark.gitee.io/resources/ARKF/DemoVideo/ARKF_sandbox_demo.mp4">沙盘场景 Sandbox
+            <li><a href="#" rel="external nofollow" name="facet_tree_video"
+                    onclick="js_load_video(name);return false;">分面树场景 Facet
+                    tree scene</a></li>
+            <li><a href="#" rel="external nofollow" name="sandbox_video"
+                    onclick="js_load_video(name);return false;">沙盘场景 Sandbox
                     scene</a></li>
         </ul>
     </div>
